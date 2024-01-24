@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Nhập sản phẩm</title> </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./style.css">
+  <script src="main.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<div class="container-fluid container-form">
+
+  <form class="form-product" name="form_pro">
+    <div class="form-top">
+      <p> NHẬP SẢN PHẨM  </p>
+    </div>
+    <div class="form-center">
+      <div class="name-product">
+        <label class="title-name" for="name_sp">Tên sản phẩm:</label>
+        <label class="title-qlt" for="quanlity">Số lượng:</label>
+        <label class="title-price" for="price">Giá tiền:</label>
+        <label class="title-discount" for="discount">Giảm giá (%):</label>
+      </div>
+      <div class="input-product">
+        <input type="text" name="name_sp" id="name_sp" required>
+        <input type="number" name="quanlity" id="quanlity" min="0" required>
+        <input type="number" name="price" id="price" min="0" required>
+        <input type="number" name="discount" id="discount" required>
+      </div>
+    </div>
+
+    <div class="form-bottom">
+      <button class="btn-sell" type="button" onclick="sell()">Mua hàng</button>
+      <button class="btn-reset" type="reset">Nhập lại</button>
+    </div>
+  </form>
+
+  <table class="w70 table-bordered container">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tên sản phẩm</th>
+        <th>Số lượng</th>
+        <th>Giá tiền</th>
+        <th>Giảm giá</th>
+        <th>Thành tiền</th>
+      </tr>
+    </thead>
+    <tbody id="tag-table"></tbody>
+  </table>
+
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+</body>
+
+</html>
